@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">City</th>
+            <th scope="col">Subcountry</th>
+            <th scope="col">Country</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="cities">
+        <tr *ngFor="let city of cities">
+            <th scope="row">{{city.geonameid}}</th>
+            <td>{{city.name}}</td>
+            <td>{{city.subcountry}}</td>
+            <td>@{{city.country}}</td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="!cities">
+        <tr>
+            <td colspan="4">
+                There are no cities to show...
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- add some space at the bottom of the page -->
+<div class="margin"></div>
